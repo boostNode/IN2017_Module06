@@ -2,7 +2,7 @@
  *  Author: Troy Davis
  *  Project: Module06 - Lesson02 - Console
  *  Class: IN 2017 (Advanced C#)
- *  Date: Feb 23, 2017 
+ *  Date: Mar 01, 2017 
  *  Revision: Original
  */
 
@@ -32,63 +32,63 @@ namespace Lesson02
             // wait on user to close console
             Console.Write("\nPress 'Enter' to exit: "); Console.ReadLine();
         }
-        class Rectangle
+    }
+    class Rectangle
+    {
+        // contructors
+        public Rectangle()
         {
-            // contructors
-            public Rectangle()
-            {
-                // default constructor - doing nothing here
-            }
-            public Rectangle(double length, double width)
-            {
-                // example of using this keyword; allows input field names to shadow class property names
-                this.length = length;
-                this.width = width;
-            }
+            // default constructor - doing nothing here
+        }
+        public Rectangle(double length, double width)
+        {
+            // example of using this keyword; allows input field names to shadow class property names
+            this.length = length;
+            this.width = width;
+        }
 
-            // properties (manually implemented)
-            private double length;
-            private double width;
-            public double Length
+        // properties (manually implemented)
+        private double length;
+        private double width;
+        public double Length
+        {
+            get
             {
-                get
-                {
-                    return length;
-                }
-                set
-                {
-                    if (value > 0.0)
-                        length = value;
-                }
+                return length;
             }
-            public double Width
+            set
             {
-                get
-                {
-                    return width;
-                }
-                set
-                {
-                    if (value > 0.0)
-                        width = value;
-                }
+                if (value > 0.0)
+                    length = value;
             }
-            // properties (auto-implemented)
-            /*
-            public double Length { get; set; }
-            public double Width { get; set; }
-            */
+        }
+        public double Width
+        {
+            get
+            {
+                return width;
+            }
+            set
+            {
+                if (value > 0.0)
+                    width = value;
+            }
+        }
+        // properties (auto-implemented)
+        /*
+        public double Length { get; set; }
+        public double Width { get; set; }
+        */
 
-            // methods
-            public void InitFields(double l, double w)
-            {
-                length = l;
-                width = w;
-            }
-            public double GetArea()
-            {
-                return length * width;
-            }
+        // methods
+        public void InitFields(double l, double w)
+        {
+            length = l;
+            width = w;
+        }
+        public double GetArea()
+        {
+            return length * width;
         }
     }
 }
